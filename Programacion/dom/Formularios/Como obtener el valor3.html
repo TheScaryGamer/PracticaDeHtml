@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  
+  <head>
+    
+    <meta charset="UTF-8">
+    <title>como obtener el valor de los elementos de un formulario</title>
+    
+  </head>
+  
+  <body>
+    
+    <select id="opciones" name="Opciones">
+      
+      <option value="1">Primera opcion</option>
+      <option value="2">Segunda opcion</option>
+      <option value="3">Tercera opcion</option>
+      <option value="4">Cuarta opcion</option>
+      
+    </select>
+    
+    <script>
+      
+      //obtener la lista
+      var lista = document.getElementById("opciones");
+      
+    //obtener el indice de la opcion que se ha seleccionado
+  var seleccionIndice = lista.selectedIndex;
+  
+//con el indice y el array "option", obtenere la opcion seleccionada
+
+var opcionSeleccionada = lista.options[seleccionIndice];
+
+//obtener el valor y el texto del valor seleccionado
+var textoSeleccionado = opcionSeleccionada.text;
+
+var valorSeleccionado = opcionSeleccionada.value;
+
+alert("seleccionastes: " + textoSeleccionado + "\nsu valor es: " +  valorSeleccionado)
+
+//tambien se puede resumir haci
+var resumen = lista.options[lista.selectedIndex].value;
+
+var resumen2 = lista.options[lista.selectedIndex].text;
+      
+    </script>
+    
+  </body>
+  
+</html>

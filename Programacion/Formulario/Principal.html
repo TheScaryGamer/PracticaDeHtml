@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+  
+  <head>
+    
+    <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+    <title>Formulario2</title>
+    
+  </head>
+  
+  <body class="F">
+      
+      <form class="A" action="" id="Form" name="formulario" method="get">
+        
+           <h1 class="titulos">Registros</h1>
+        
+        <p class="palabras">Name:</p>
+        <input type="text" class="cajaV" name="Cajas" id="nombre" maxlength="20" placeholder="1° and 2° Name">
+        
+        <br>
+        <br>
+        
+        <p class="palabras">Last name:</p>
+        <input type="text" class="cajaV" name="Cajas" id="apellidos" maxlength="20" placeholder="1° and 2° Last name">
+        
+        <br>
+        <br>
+        
+        <p class="palabras">Sex:</p>
+        <input type="radio" name="Sex" id="Hombre" value="Male">Male
+        <input type="radio" name="Sex" id="Mujer" value="Female">Female
+        
+        <br>
+        <br>
+        
+        <input type="checkbox" name="Terminos y servicios" id="cuadro" required>Terminos y servicios
+        
+        <br>
+        <br>
+        
+        <input type="submit" id="btn" value="enviar" class="boton">
+        
+      </form>
+      
+      <script>
+        (function(){
+          
+var formulario = document.getElementsByName("formulario")[0]
+        var elementos = formulario.elements
+        var boton = document.getElementById("btn")
+        
+          var validarNombre = function(e){
+            
+            if(formulario.nombre.value == 0){
+              
+              alert("error:camp(Name:) is null")
+              e.preventDefault();
+            } 
+          };
+        
+        var validarApellido = function(e){
+          
+          if(formulario.apellidos.value == 0){
+            
+            alert("error:camp(Last name:) is null")
+            e.preventDefault();
+            
+          }
+          
+        };
+        
+        var validacionSex = function(e){
+          
+          if(formulario.Sex[0].checked == true || formulario.Sex[1].checked == true){
+            
+          } else{
+            
+            alert("error:camp(Sex:) is null")
+            e.preventDefault();
+            
+          }
+          
+        };
+        
+        var evento = function(e){
+        
+        if(formulario.Sex[0].checked == true){
+          
+          alert("Tu nombre completo es" + " " + formulario.nombre.value + " " +formulario.apellidos.value + "\n" + "tu eres un " + "hombre")
+          } 
+          else if(formulario.Sex[1].checked == true){
+          
+      alert("Tu nombre completo es" + " " + formulario.nombre.value + " " + formulario.apellidos.value + "\n" + "tu eres una" + " " + "mujer" ) } 
+      
+        else{  }
+        };
+        
+       var validacion = function(e){
+          
+          validarNombre(e)
+          validarApellido(e)
+          validacionSex(e)
+          evento(e)
+      };
+      
+      formulario.addEventListener("submit", validacion);
+        }())
+        
+        
+      </script>
+  </body>
+  
+</html>

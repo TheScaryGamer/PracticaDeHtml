@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  
+  <head>
+    
+    <meta charset="UTF-8">
+    
+    <title>Timer's, Timeout e intervals</title>
+    
+  </head>
+  
+  <body>
+    
+  </body>
+      
+<script>
+  (function(){
+var contador = 0
+
+var numeros = function(){
+  
+  contador++;
+  console.log(contador)
+  
+  //los intervalos por lo general son infinitos pero si quieres que se detenga despues de de algo tienes que establecer un if
+  
+ if(contador == 5){
+   
+   //para detener un intervalo
+   clearInterval(intervalo)
+   
+ }
+  
+}
+
+    var saludo = function(){
+      
+      //para mostrar los mensajes en la consola
+      console.log('saludar')
+      
+    };
+    
+//setTimeout('funcion', 'segundos a esperar') espera cierto tiempo para ejecutar la funcionbsolo funciona una vez "1seg = 1000"
+  
+    setTimeout(saludo, 6000);
+    
+//interval mismas condiciones que el timeout
+//se puede agregar a una variable como su id
+
+ var intervalo = setInterval(numeros, 1000);
+    
+  }())
+  
+  
+</script>
+
+  
+</html>

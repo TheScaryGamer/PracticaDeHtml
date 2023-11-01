@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Prueba</title>
+    
+    <style>
+      
+      div {
+        
+      width: 200px;
+      height: 200px;
+      background: #dddddd;
+      display: inline-block;
+      margin-right: 10px;
+      border: 1px solid #AAAAAA;
+      
+      }
+      
+      .azul{
+        
+        background: #0074D9;
+        border: 1px solid #000;
+        
+      }
+      
+      .red{
+        
+        background: #FF4136;
+        
+        border: 1px solid #000;
+      }
+    </style>
+    
+</head>
+
+<body>
+    
+    <section id="contenedor">
+      
+      <div class=""></div>
+      <div class=""></div>
+      
+    </section>
+    
+<script type="text/javascript" charset="utf-8">
+
+//como añadirle atributos a los elementos dentro del nodo
+var elemento = document.createElement("div");
+
+var padre = document.getElementById("contenedor");
+
+var referencia = document.getElementsByTagName("div")[0];
+
+elemento.setAttribute("class", "azul");
+padre.insertBefore(elemento, referencia);
+
+</script>
+
+</body>
+
+</html>

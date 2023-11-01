@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>Pagina de prueba</title>
+    
+</head>
+
+<body>
+    
+    <h1 id="titulo">Titulo</h1>
+    <br />
+    <br />
+    <div id="subtitulo"></div>
+    
+    <p id="primero">Nose lo que sea 1</p>
+    <br />
+    
+    <p id="segundo">Nose lo que sea 2</p>
+    <br />
+    
+    <p id="tercero">Nose lo que sea 3</p>
+    
+</body>
+
+<script type="text/javascript" charset="utf-8">
+    
+    //acceder a varios elementos
+    var elementosP = document.getElementsByTagName("p")
+    
+    //acceder a un elemento medieante el id
+    var segundoP = document.getElementById("segundo")
+    
+    //pasos a seguir
+    
+    //1. crear un elemento
+    var elemento = document.createElement("h2")
+    
+    //2. crear un nodo de texto
+    var contenido = document.createTextNode("Este es el titular de la semana")
+    
+    //3. añadir nodos de texto al elemento
+    elemento.appendChild(contenido)
+    
+    //4. agregar atributos al elemento
+    elemento.setAttribute("color" , "greeen")
+    elemento.setAttribute("align" , "center")
+    
+    //5. agregar el elemento al documento
+    document.getElementById("subtitulo").appendChild(elemento)
+    
+    
+</script>
+
+</html>

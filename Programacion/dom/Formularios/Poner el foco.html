@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  
+  <head>
+    
+    <meta charset="UTF-8">
+    <title>Como poner el focus a un elemento</title>
+    
+  </head>
+  
+  <body>
+    
+    <form id="formulario"  name="formularios" action="#">
+      
+      <!--asignar la propiedad "focus()" al input-->
+      <input type="text" id="caja" name="Cajas" >
+      
+      <input type="text" id="caja1" name="Cajas" >
+      
+    </form>
+    
+    <script>
+      
+      //primera forma de poner la propiedad "focus()"
+      var Primera = document.getElementById("caja").focus();
+      
+//segunda forma, este sirve mas que todo para los diferentes campos
+      
+    if(document.forms.length > 0) {
+      
+  for(var i=0; i < document.forms[0].elements.length; i++)  {
+    
+    var campo = document.forms[0].elements[i];
+    
+    if(campo.type != "hidden") {
+      
+      campo.focus();
+      break;
+      
+    }
+  }
+}
+    
+    
+    </script>
+    
+  </body>
+  
+</html>

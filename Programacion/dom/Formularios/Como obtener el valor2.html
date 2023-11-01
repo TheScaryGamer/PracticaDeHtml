@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  
+  <head>
+    
+    <meta charset="UTF-8">
+<title>Como obtener el valor de los diferentes elementos de un formulario</title>
+    
+  </head>
+  
+  <body>
+    
+    <!--obtener el valor de un checkbox-->
+    <input type="checkbox" value="Condiciones" name="condiciones" id="condiciones">He leido los terminos y condiciones
+    
+    <input type="checkbox" value="Privacidad" name="privacidad" id="privacidad">He leido los terminos de privacidad
+    
+    <script>
+      
+      //haci se obtiene un valor de los checkbox
+    var elemento = document.getElementById("condiciones");
+    alert("elemento: " + elemento.value + "\n seleccionado: " + elemento.checked);
+    
+    elemento = document.getElementById("privacidad");
+    alert("elemento: " + elemento.value + "\n seleccionado: " + elemento.checked);
+    
+    
+    </script>
+  </body>
+  
+</html>

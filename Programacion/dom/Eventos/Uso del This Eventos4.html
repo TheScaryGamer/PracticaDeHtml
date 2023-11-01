@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+  
+  <head lang="en">
+    
+    <meta charset="UTF-8">
+    <title>Uso del this</title>
+    
+  </head>
+  
+  <body>
+    
+    <!--forma en la que no se tiene que usa-->
+    <div id="contenidos 1" style="widht: 150px; height: 60px; border: solid blue 5px;" onmouseover="document.getElementById('contenidos 1').style.borderColor='red';"
+    onmouseout="document.getElementById('contenidos 1').style.borderColor='blue';">
+      
+      <p>Ejemplo 1</p>
+      
+    </div>
+    
+  <!--para no ensuciar el codigo se usa "this"-->
+  <div id="contenidos 2" style="widht: 150px; height: 60px; border: solid green 5px" onmouseover="this.style.borderColor='silver'" onmouseout="this.style.borderColor='green';">
+    
+    <p>segundo ejemplo</p>
+    
+  </div>
+    <!-- el this es lo que mas se usa a nivel profecional-->
+    
+  </body>
+  
+</html>

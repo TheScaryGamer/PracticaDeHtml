@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>Pagina de prueba 2</title>
+    
+</head>
+
+<body>
+    
+    <ol id="padrecito">
+        <li>cualquiera</li>
+        <li>cualquiera2</li>
+    </ol>
+    
+</body>
+
+<script type="text/javascript" charset="utf-8">
+    //remplazar un nodo
+    var elemento = document.createElement("li"),
+        contenido = document.createTextNode("Nuevo elemento");
+        
+        elemento.appendChild(contenido)
+        
+    var padre = document.getElementsByTagName("li")[0].parentNode;,
+        referencia = document.getElementsByTagName("li")[0];
+    padre.replaceChild(elemento, referencia)
+        
+</script>
+
+</html>

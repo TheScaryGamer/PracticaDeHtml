@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  
+  <head>
+    
+    <meta charset="UTF-8"> 
+    <title>¿Como acceder un formulario mediante el name?</title>
+    
+  </head>
+  
+  <body>
+    
+<!--Nota1: Se puede acceder a un formulario con diferentes id-->
+    <form id="formulario"></form>
+    
+<!--Nota2: Tambien se puede acceder a los elementos de un formulario con un solo id--> 
+    <form id="otroFormulario">
+      
+      <input type="text" id="elemento">
+      
+    </form>
+    
+    <script>
+      
+//Nota1: haci se accede a un formulario por su id
+      var formulario = document.getElementById("formulario").form
+
+      var otro formulario = document.getElementById("otroFormulario").form 
+      
+//Nota2:haci se accede a un elemento de un formulario con su id
+var elemento1: document.getElementById("elemento")
+
+
+      
+    </script>
+    
+  </body>
+  
+</html>

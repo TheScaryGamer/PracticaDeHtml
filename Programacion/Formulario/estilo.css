@@ -1,0 +1,64 @@
+.F{
+  
+  background: #babdbdce;
+  
+}
+
+.A{
+  
+  background: #7ed0e4;
+  border: 6px #20b5db outset;
+}
+
+.titulos{
+  
+  text-align: center;
+  color: red;
+  margin-top: 5px;
+  font-weight: bold;
+  font-family: Sans-Serif;
+  font-size: 20;
+  
+}
+
+.cajaV{
+  height: 25px;
+  width: 250px;
+  font-size: 15px;
+  font-family: Arial;
+  font-weight: 500;
+  color: #000000;
+  border: 3px #77f38a solid;
+  
+}
+
+.cajaR{
+  
+  height: 25px;
+  width: 250px;
+  font-size: 15px;
+  font-family: Arial;
+  font-weight: 500;
+  color: #000000;
+  border: 3px #e44928 solid;
+  
+}
+
+.boton{
+  
+  border: 3px #e94225 outset;
+  background: #e33909;
+  font-weight: bold;
+  
+  
+}
+
+.palabras{
+
+margin-bottom: 0px;
+  font-family: cursive;
+  font-size: 25px;
+  font-weight: bold;
+  color: #1a1d1dc4;
+  
+}

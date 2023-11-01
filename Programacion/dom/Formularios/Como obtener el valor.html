@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  
+  <head>
+    
+    <meta charset="UTF-8">
+<title>Obtener el valor de diferentes elemenetos del los formularios</title>
+    
+  </head>
+  
+  <body>
+    
+    <!--obtener el valor de texto-->
+    <input type="text" id="texto">
+    
+    <!--N1:obtener el valor de una textarea-->
+    <textarea id="parrafo"></textarea>
+    
+    <!--N2:verificar que radioButton han sido seleccionado-->
+    <input type="radio" value="Si" id="pregunta_si" name="pregunta">Si
+    
+    <input type="radio" value="No" id="pregunta_no" name="pregunta">No
+    
+    <input type="radio" value="Nose" id="pregunta_nose" name="pregunta">Nose
+    <script>
+      
+    //haci se obtiene el valor de texto
+    var Vtexto = document.getElementById("texto").value;
+    
+   // N1:haci se obtiene el valor de una textarea
+   var Vtextarea = document.getElementById("parrafo").value;
+   
+   //N2: esto indica que radioButton ha sido seleccionado
+   var Sradio = document.getElementsByName("pregunta");
+   
+   for(var i = 0; i < Sradio.length; i++){
+     
+     alert("Elemento: " +  Sradio[i].value + "\n seleccionado: " + Sradio[i].checked)
+     
+   }
+      
+    </script>
+    
+  </body>
+  
+</html>

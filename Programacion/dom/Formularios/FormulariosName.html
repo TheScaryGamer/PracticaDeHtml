@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  
+  <head>
+    
+    <meta charset="UTF-8"> 
+    <title>¿Como acceder un formulario mediante el name?</title>
+    
+  </head>
+  
+  <body>
+    
+<!--Nota1: Se puede acceder a un formulario con diferentes nombres-->
+    <form name="formulario"></form>
+    
+<!--Nota2: Tambien se puede acceder a los elementos de un formulario con un solo nombre--> 
+    <form name="otroFormulario">
+      
+      <input type="text" name="elemento">
+      
+    </form>
+    
+    <script>
+      
+//Nota1: haci se accede a un formulario por su nombre
+      var formulario = document.formulario;
+
+      var otro formulario = document.otroFormulario;
+      
+//Nota2:haci se accede a un elemento de un formulario
+var elemento1: document.otroFormulario.elemento;
+
+
+      
+    </script>
+    
+  </body>
+  
+</html>

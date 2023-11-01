@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>Prueba</title>
+    
+</head>
+
+<body>
+    
+    <p><b>Welcome to house S.R<span id="name"></span></b></p> 
+    
+</body>
+
+<script type="text/javascript" charset="utf-8">
+    
+    var name1 = prompt("coloque su nombre")
+    
+    var elemento = document.createElement("p")
+    
+    var contenido = document.createTextNode(name1)
+    
+    elemento.appendChild(contenido)
+    document.getElementById("name").appendChild(elemento)
+    
+</script>
+
+</html>

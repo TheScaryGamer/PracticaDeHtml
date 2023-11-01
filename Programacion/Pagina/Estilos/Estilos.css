@@ -1,0 +1,13 @@
+.light{
+  color: black;
+  font-weight: lighter;
+  background: white;
+}
+
+.shadown{
+  
+  color: white;
+  font-weight: bold;
+  background: black;
+  
+}

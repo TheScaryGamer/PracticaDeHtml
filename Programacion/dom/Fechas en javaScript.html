@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  
+  <head>
+    
+    <title>fechas en javaScript</title>
+    <meta charset="UTF-8">
+    
+  </head>
+  
+  <body>
+    
+    <script>
+      
+      (function(){
+        //trabajar con fechas
+        
+        //extrae la fecha nativa del dispositivo
+        var fecha = new Date();
+        
+        //muestra la fecha en la que se actualizo la pagina
+        document.write(fecha);
+        
+        //para extraer algo especifico de la fecha se usablo siguiente
+        var horas = fecha.getHours();
+        var minutos = fecha.getMinutes();
+        var segundos = fecha.getSeconds();
+        
+        var mes = fecha.getMonth();
+        var dia = fecha.getDay();
+        var diaDelMes = fecha.getDate();
+        var año = fecha.getFullYear();
+        
+        //el "-12" es para ponerlo en horario normal
+        console.log(horas - 12);
+        console.log(minutos);
+        console.log(segundos);
+        
+        //tener en cuenta que se empieza a contar desde el 0
+        console.log(mes);
+        console.log(dia);
+        console.log(diaDelMes);
+        console.log(año);
+        
+      }())
+      
+    </script>
+    
+  </body>
+  
+</html>

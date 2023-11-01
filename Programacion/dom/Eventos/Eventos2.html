@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+  
+  <head>
+    
+    <title>Eventos</title>
+    
+  </head>
+  
+  <body id="Cuerpo">
+    
+    <button id="boton">Boton</button>
+    
+    <input type="text" id="input">
+    <br>
+    
+    <button id="otro">otro boton  mas</button>
+    
+ <script type="text/javascript" charset="utf-8">
+ 
+ //para añadir eventos se usa una funcion anonima o con nombre
+    (function(){
+      
+      //se crea una variable
+      var boton1 = document.getElementById("boton")
+      
+      //para agregar eventos a esa variable se usa addEventListener("tipo de evento", "funcion")
+      boton1.addEventListener("click", function(){
+        
+        console.log('funciono! :D')
+      });
+      
+    }());
+    
+    (function(){
+      
+      //otra forma de hacer el evento seria haci
+      var saludo = function(){
+        
+        
+        alert("saludacion");
+      };
+      // se puese colocar cualquier cantidad de funciones que querramos
+      var saludo2 = function(){
+        
+        alert("saludo2");
+        
+      };
+      var otroBoton = document.getElementById("otro");
+      otroBoton.addEventListener("click", saludo);
+      otroBoton.addEventListener("click",  saludo2);
+      otroBoton.removeEventListener("click", saludo);
+      
+      //para remover un evento se usa removeEventListener("define el tipo de evento a borrar", "eliminar la funcion de ese evento")
+      
+    }());
+  </script>
+  
+  </body>
+  
+</html>

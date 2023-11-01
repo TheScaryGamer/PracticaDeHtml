@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+  
+  <head>
+    
+    <meta charset="UTF-8">
+    <title>validacion de formularios</title>
+    
+  </head>
+  
+  <body>
+    <!-- "action ='archivo'" es la direcion del archivo que va a validar el formulario o realizar una accion con el y "method='get'" es una forma que se usa para los formularios -->
+    
+    <form action="" name="Formulario" method="get">   
+    
+    <!-- "maxlength='numero'" se usa para poner una cantidad maxima de caracteres puede ser volado facilmente haci que se tiene que reforzar con javaScript y "placeholder='lo que sea'" es para mostrar que va dentro del cuadro-->
+    
+    <input type="text" name="nombre" id="CuadroDeTxt" maxlength="30" placeholder="Nombre:">
+    <br>
+    
+    <!-- "required" es un campo obligatorio que se usa para una validacion para que no se salte esa opcion-->
+    <input type="radio" name="sexo" id="hombre" value="Hombre"> Hombre
+    <input type="radio" name="sexo" id="mujer" value="Mujer"> Mujer
+    <br>
+    
+    <input type="checkbox" name="terminos" id="cuadro"> Terminos y condiciones
+    <br>
+    
+    <input type="submit" id="btn" value="enviar">
+    </form>
+    
+    <script>
+      (function(){
+        
+        var formulario = document.getElementsByName("Formulario")[0],
+            elementos = formulario.elements,
+            boton = document.getElementById("btn");
+        
+        //para validar un radiobutton o un checkbox se usa una funcion que la compruebe y dependiendo del caso se usa "formulario donde esta integrado"."nombre del elemento".value o .checked
+        var validarNombre = function(e){
+          
+          if(formulario.nombre.value == 0){
+          alert("Por favor complete el campo nombre")
+          e.preventDefault();
+          
+          }
+          
+        };
+        
+        var validarRadio = function(e){
+          if(formulario.sexo[0].checked == true || formulario.sexo[1].checked == true){
+            
+          }
+          else{
+            
+            alert("por favor seleccione un genero")
+            e.preventDefault();
+          }
+          
+        };
+        
+        var validarCheckbox = function(e){
+          
+          if(formulario.terminos.checked == false){
+            
+            alert("por favor acepte los terminos y condiciones")
+            e.preventDefault()
+            
+          }
+        };
+        
+        var validar = function(e){
+          
+          validarNombre(e);
+          validarRadio(e);
+          validarCheckbox(e);
+        };
+        
+        formulario.addEventListener("submit", validar);
+      }())
+      
+      
+    </script>
+  </body>
+  
+</html>

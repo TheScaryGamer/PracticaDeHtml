@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+
+<html class="" id="cuerpo">
+  
+  <head>
+    
+    <title>Home</title>
+    <link rel="stylesheet" href="Estilos/Estilos.css"/>
+    
+  </head>
+  
+  <body>
+    
+    <p class="" id="parrafo">La variable ie vale true si el navegador en el que se ejecuta el script es de tipo Internet Explorer (cualquier versión) y vale false en otro caso. Para el resto de navegadores, las coordenadas respecto del origen de la página se obtienen mediante las propiedades pageX y pageY. En el caso de Internet Explorer, se obtienen sumando la posición respecto de la ventana del navegador (clientX, clientY) y el desplazamiento que ha sufrido la página (document.body.scrollLeft, document.body.scrollTop).</p>
+    
+    <input type="button" name="Cambio de color" id="boton" value="Cambiar el color de la pagina" onclick="cambio.classList.replace('light', 'shadown')" ondblclick="cambio.classList.replace('shadown', 'light')"/>
+    
+    <script>
+      
+      var cambio = document.getElementById("cuerpo")
+      
+      cambio.setAttribute("class", "light")
+    
+    
+    </script>
+    
+  </body>
+  
+</html>

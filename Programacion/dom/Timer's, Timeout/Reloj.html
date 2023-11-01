@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  
+  <head>
+    
+    <title>Reloj</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Reloj.css">
+    
+  </head>
+  
+  <body id="Cuerpo">
+    
+    <div id="Mostrar">
+      
+      <h1 id="mostrar2" class="Inicio"></h1>
+      <p id="mostrarTiempo"></p>
+      
+    </div>
+    
+    <script>
+    (function(){
+      //fecha
+      var fecha = new Date();
+      
+      var año = fecha.getFullYear();
+      var mes = fecha.getMonth();
+      var dia = fecha.getDate();
+      var semana = fecha.getDay();
+      
+      var horas = fecha.getHours();
+      var minutos = fecha.getMinutes();
+      var segundos = fecha.getSeconds(setInterval(1000));
+      
+
+
+var diaSemana = ["Domingo", "lunes", "martes", "miercoles", "jueves", "viernes", "sabado"]
+  
+var meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+
+//para mostrar los dias de la semana
+
+var elemento5 = document.createTextNode(diaSemana[semana] + " " + dia)
+
+document.getElementById("mostrar2").appendChild(elemento5)
+
+//esto es para mostrar los meses
+
+var elemento2 = document.createTextNode(" de " + meses[mes])
+
+document.getElementById("mostrar2").appendChild(elemento2)
+
+//mostrar hora 
+
+ // var h = document.createTextNode(setInterval(horas, 1000) + ":")
+  
+  
+  //document.getElementById("mostrarTiempo").appendChild(h)
+
+//mostrar segundos
+var s = document.createTextNode(segundos)
+
+document.getElementById("mostrarTiempo").appendChild(s)
+
+    }())
+      
+    </script>
+    
+  </body>
+  
+</html>

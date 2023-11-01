@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>Pagina de prueba 2</title>
+    
+</head>
+
+<body>
+    
+    <ol id="padrecito">
+        <li id="1">cualquiera</li>
+        <li id="2">cualquiera2</li>
+    </ol>
+    
+</body>
+
+<script type="text/javascript" charset="utf-8">
+
+//modificar el texto de un codigo desde el DOM
+var Pelemento = document.getElementById("1");
+//ejecuta las etiquetas de HTML
+Pelemento.innerHTML = "Nuevo texto" 
+
+//segunda forma de modificarlo
+var Selemento = document.getElementById("2")
+
+//esta no lee las estiquetas HTML
+Selemento.textContent = "cuatrocientos puntos"
+
+</script>
+
+</html>

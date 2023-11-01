@@ -1,0 +1,69 @@
+<HTML DOCTYPE!>
+<html>
+
+<head>
+
+<title>aprendiendo hacer formularios</title>
+
+</head>
+
+<body>
+
+<!--  La etiqueta <form> es como un <div> siendo la diferencia que "form" se usa para contener solo formularios  -->
+<form action="" method="">
+
+<ul>
+
+<li>
+
+<!--  La etiqueta <label> se utiliza para identificar los diferentes controladores que vamos a usar, el for a su vez sirve para anclar el indentificador al controlador  -->
+<label for="name">Nombre:</label>
+<!--La etiqueta <Input> es un controlador de texto el cual define sufuccion con type-->
+<input type="text" id="name" name="user_name">
+
+</li>
+
+<li>
+
+<!--Para complementar esta casilla se le pueden añadir varios atributos de la siguiente manera-->
+<label for="lastName">Apellido</label>
+<input type="text" id="lastName" name="userLastName" size="40" maxlength="20" placeholder="Digite su segundo Nombre">
+
+</li>
+
+<li>
+<!-- Asi se crea una lista de seleccion-->
+<label for="Ciudad">Seleccione unqa opcion</label>
+<select>
+<option></option>
+<option>Bogota</option>
+<option>Cartagena</option>
+<option>Barranquilla</option>
+</select>
+</li>
+
+<li>
+
+<!--Circulos de selccion de una sola casilla-->
+<label for="Genero">Seleccione su genero</label> <br>
+<input type="radio" id="Genero" name="UserGender">Hombre
+<input type="radio" id="Genero" name="UserGender">Mujer
+</li>
+
+<li>
+
+<!--Asi se hacen los checkbox-->
+<label for="Estudios">Nivel de estudio:</label>
+<input type="checkbox" id="Estudios" name="Primaria">Primaria
+<input type="checkbox" id="Estudios" name="Secundaria">Secundaria    
+<input type="checkbox" id="Estudios" name="Universidad">Universidad
+
+</li>
+
+</ul>
+
+</form> 
+    
+</body>
+
+</html>

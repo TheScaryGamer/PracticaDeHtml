@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+  
+  <head>
+    
+    <title>Eventos</title>
+    
+  </head>
+  
+  <body id="Cuerpo">
+    
+<!--Evento incrustado en html(este metodo es menos profecional)-->
+    <input type="button" value="color rojo" onclick="Cuerpo.style.background= 'red';" />
+    
+    <input type="button" value="Color azul" onclick="Cuerpo.style.background= '#583dfe';"/>
+    
+   <input type="button" value="doble color" onclick="Cuerpo.style.background= '#78ff81';" ondblclick="Cuerpo.style.background= '#03c9ae';"/>
+ <script type="text/javascript" charset="utf-8">
+    
+    document.getElementById(Cuerpo)
+    
+    Cuerpo.style.background = "#583dfe"
+    
+  </script>
+  
+  </body>
+  
+</html>

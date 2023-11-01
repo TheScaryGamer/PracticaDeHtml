@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>Pagina de prueba 2</title>
+    
+</head>
+
+<body>
+    
+    <ol id="padrecito">
+        <li>cualquiera</li>
+        <li>cualquiera2</li>
+    </ol>
+    
+</body>
+
+<script type="text/javascript" charset="utf-8">
+//para crear una variable con solo un "var" se pone una coma
+    var elemento = document.createElement("li"),
+        contenido = document.createTextNode("Nuevo elemento");
+        
+        elemento.appendChild(contenido)
+        
+        //para agregar el elemento en una lista de varios elementos que tengan un padre
+        var Varios_Elementos = document.getElementsByTagName("li")[0].parentNode;
+        Varios_Elementos.appendChild(elemento)
+        
+        var E1 = document.createElement("li"),
+            C1 = document.createTextNode("Nuevo elemento recien creado");
+            
+            E1.appendChild(C1)
+        
+        var padre = document.getElementById("padrecito")
+        
+        //para asignar un elemento a un padre
+        padre.appendChild(E1)
+        
+</script>
+
+</html>

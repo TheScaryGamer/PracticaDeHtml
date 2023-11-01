@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+  
+  <head>
+    
+    <meta charset="UTF-8">
+    <title>Eventos 3</title>
+    
+  </head>
+  
+  <body>
+    
+    <button id="boton">es un boton</button>
+    <input type="text" id="input"/>
+    <br>
+    <a href="http://www.google.com" id="enlace">Google</a>
+    
+    <script>
+    (function(){
+      
+      var tipo = function(e){
+        
+        //este se usa para saber que tipo de evento es ".type"
+        console.log('este evento es de tipo:' + e.type);
+        
+        //este se usa para saber que lo ocasiona ".target"
+        console.log("este evento lo ocasiono:" + e.target)
+      };
+      var prevencionDeEventos = function(e){
+        
+        //para prevenir un evento se usa .preventDefault()
+        console.log("probando si funciona el enlace pero no quiero que me lleve a la pagina")
+        //recuerda que antes del punto va el argumento de la funcion
+        e.preventDefault()
+      };
+      
+      var boton = document.getElementById("boton")
+      boton.addEventListener("click",tipo)
+      
+      var direccionWeb = document.getElementById("enlace")
+      direccionWeb.addEventListener("click", prevencionDeEventos)
+      
+    }())
+    
+    
+    </script>
+  </body>
+  
+</html>

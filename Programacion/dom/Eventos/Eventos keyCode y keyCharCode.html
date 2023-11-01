@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    
+    <meta charset="UTF-8">
+    
+    <title></title>
+    
+  </head>
+  
+  <body>
+    
+    <div id="info">
+      
+      <input type="text" name="Caja" id="Txt"/>
+      <input type="submit" name="boton" id="enviar" value="enviar">
+      
+    </div>
+    
+    <script>
+(function(){
+
+window.onload = function(){
+  
+  //valor de la tecla pulsada
+  window.onkeyup = muestraInformacion;
+  
+  //tecla precionada
+  window.onkeypress = muestraInformacion;
+  
+  //valor de la tecla especial
+  window.onkeydown = muestraInformacion;
+  
+}
+
+//para que un evento funcione en los diferentes navegadores se usa esto
+function muestraInformacion(elEvento){
+  
+  var evento = elEvento || window.event;
+//hasta aqui solamente
+  
+  var mensaje = "Tipo de evento: " + evento.type + "<br>" + "Propiedad keyCode: " + evento.keyCode + "<br>" + "evento charCode: " + evento.charCode + "<br>" + "Caracter pulsado: " + String.fromCharCode(evento.charCode);
+  
+  info.innerHTML += "<br>--------------------------------------<br>" + mensaje
+}
+
+function manejador(elEvento) {
+  
+  var evento = elEvento || window.event;
+  
+  var caracter = evento.charCode || evento.keyCode;
+  
+  alert("El carácter pulsado es: " + String.fromCharCode(caracter));
+}
+
+document.onkeypress = manejador;
+
+}())
+      
+    </script>
+    
+  </body>
+  
+</html>
