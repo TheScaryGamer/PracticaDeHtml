@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8"> 
+<title>Como estructurar un formulario</title>
+
+</head>
+
+<body>
+
+<form action="" method="get">
+
+<!--La etiqueta fieldset sirve para agrupar los controladores de diferentes secciones de un formulario-->
+<fieldset>
+
+<!--La etiqueta legend sirve para poder colocar por decir un titulo en mitad del recuadro-->
+<legend><strong>Datos Basicos</strong></legend>
+
+<ul>
+
+<li>
+
+<label for="Name">Nombre:</label>
+<input type="text" id="Name" name="UserName" placeholder="Introdusca sus primeros dos nombres" size="35">
+
+</li>
+
+<li>
+
+<label for="LastName">Apellidos:</label>
+<input type="text" id="LastName" name="UserLastName" placeholder="Introdusca sus dos apellidos" size="35">
+
+</li>
+
+<li>
+
+<label for="Blood">Tipo de sangre:</label>
+<br>
+<input type="radio" id="Blood" name="GroupBlood" value="A+">A+
+<input type="radio" id="Blood" name="GroupBlood" value="A-">A-
+<input type="radio" id="Blood" name="GroupBlood" value="B+">B+
+<input type="radio" id="Blood" name="GroupBlood" value="B-">B-
+<input type="radio" id="Blood" name="GroupBlood" value="O+">O+
+<input type="radio" id="Blood" name="GroupBlood" value="O-">O-
+
+</li>
+
+</ul>
+
+</fieldset>
+
+<!--Segundo Campo de datos dentro del formulario-->
+<fieldset>
+
+<legend><strong>Datos Electronicos</strong></legend>
+
+<ul>
+
+<li>
+
+<label for="email">Coloque su correo electronico:</label>
+<input type="email" id="email" name="UserEmail">
+
+</li>
+
+<li>
+
+<label for="CC">Coloque su numero de indentificacion:</label>
+<input type="number"  id="CC"  name="CCUser">
+
+</li>
+
+<li>
+
+<label for="Number">Coloque aqui su numero de telefono:</label>
+<input type="number" id="numero" name="UserNumber">    
+
+</li>
+
+</ul>
+
+</fieldset>
+
+</form>
+
+</body>
+
+</html>

@@ -54,13 +54,31 @@
 
 <!--Asi se hacen los checkbox-->
 <label for="Estudios">Nivel de estudio:</label>
+<br>
 <input type="checkbox" id="Estudios" name="Primaria">Primaria
-<input type="checkbox" id="Estudios" name="Secundaria">Secundaria    
+<br>
+<input type="checkbox" id="Estudios" name="Secundaria">Secundaria
+<br>    
 <input type="checkbox" id="Estudios" name="Universidad">Universidad
 
 </li>
 
+<li>
+
+<!--La etiqueta <Textarea> permite crear un cuadro de texto para que el usuario escriba en el-->
+<label for="Comments">Observaciones</label>
+<br>
+<textarea id="Comments" name="UserComments" cols="40" rows="5" placeholder="Escriba sus comentarios aqui"></textarea>
+
+</li>
+
 </ul>
+
+<!--Este boton se usa para enviar los valores de los formularios a un servidor-->
+<input type="submit" value="Enviar">
+
+<!--Este para cancelar-->
+<input type="reset" value="Cancelar">
 
 </form> 
     
