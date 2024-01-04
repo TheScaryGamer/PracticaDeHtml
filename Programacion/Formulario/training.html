@@ -1,0 +1,108 @@
+<!--Comienzo de la pagina-->
+<!DOCTYPE html>
+
+<html>
+
+<!--Recursos a cargar-->
+<head>
+    <link href="payment-form.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Formulario de Pago</title>
+</head>
+
+<!--Cuerpo de la pagina-->
+<body>
+
+    <!--Formulario para págos-->
+    <form>
+        
+        <p>-Los campos obligatorios son los que tienen </p><strong><bbr title="required">"*"</bbr></strong>
+
+        <!--Primera seccion del formulario-->
+        <section>
+        <fieldset>
+
+            <legend><strong>Titulo.</strong></legend>
+
+            <!--Definicion del titulo de la persona-->
+            <ul>
+                <!--Rey-->
+                <li>
+                    <label for="Funcion">Rey</label>
+                    <input type="radio" id="Funcion" name="title" value="Rey">
+                </li>
+
+                <!--Reina-->
+                <li>
+                    <label for="Funcion2">Reina</label>
+                    <input type="radio" id="Funcion2" name="title" value="Reina">
+                </li>
+
+                <!--Joker-->
+                <li>
+                    <label for="Funcion3">Joker</label>
+                    <input type="radio" id="Funcion3" name="title" value="Joker">
+                </li>
+            </ul>
+
+        </fieldset>
+
+        <!--Informacion de la persona-->
+        <fieldset>
+
+            <legend>Informacion de contacto</legend>
+
+            <!--Nombre del usuario-->
+            <p>
+            <label for="NameUser">Nombre completo: <strong><bbr title="required">*</bbr></strong></label>
+            <input type="text" id="NameUser" name="User">
+            </p>    
+
+            <!--Correo del usuario-->
+            <p>
+            <label for="MailUser">Correo Electronico: <strong><bbr title="required">*</bbr></strong></label>
+            <input type="email" id="MailUser" name="email">
+            </p>
+
+            <!--Contraseña del usuario-->
+            <p>
+            <label for="PasswordUser">Contraseña: <strong><bbr title="required">*</bbr></strong></label>
+            <input type="password" id="PasswordUser" name="password">
+            </p>
+            
+
+        </fieldset>
+        </section>
+
+        <!--Segunda seccion del formulario-->
+        <section>
+                <fieldset>
+                    <legend>informacion de pago</legend>
+
+                    <!--El usuario va a seleccionar que tipo de tarjeta tiene-->
+                    <span>Seleccione su tipo de tarjeta: </span>
+                    <select id="card" name="UsedCard">
+                        <option value="visa">VISA</option>
+                        <option value="MasterCard">Master Card</option>
+                        <option value="AmericanExpress">America Express</option>
+                    </select>
+
+                    <!--EEl usuario va a digitar su numero de tarjeta-->
+                    <p><label for="NumberCard">Numero De Tarjeta:<strong><bbr title="required">*</bbr></strong></label>
+                    <input type="tel" id="NumberCard" name="UserNumberCard"></p>
+
+                    <!--Para que el usuario introdusca la fecha de caducidad-->
+                    <p><label for="DateCard">DD/MM/AA<strong><bbr title="required">*</bbr></strong></label>
+                    <input type="date" id="DateCard" name="UserDateCard"></p>
+                    
+                    <!--Boton para enviar el formulario-->
+                    <p>
+                    <input type="submit" id="" name="subir">
+                    </p>
+                </fieldset>
+        </section>
+
+    </form>
+</body>
+
+</html>

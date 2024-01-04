@@ -4,13 +4,14 @@
 <head>
 
 <title>aprendiendo hacer formularios</title>
+<meta charset="UTF-8">
 
 </head>
 
 <body>
 
 <!--  La etiqueta <form> es como un <div> siendo la diferencia que "form" se usa para contener solo formularios  -->
-<form action="" method="">
+<form action="" method="get">
 
 <ul>
 
@@ -18,8 +19,8 @@
 
 <!--  La etiqueta <label> se utiliza para identificar los diferentes controladores que vamos a usar, el for a su vez sirve para anclar el indentificador al controlador  -->
 <label for="name">Nombre:</label>
-<!--La etiqueta <Input> es un controlador de texto el cual define sufuccion con type-->
-<input type="text" id="name" name="user_name">
+<!--La etiqueta <Input> es un controlador de texto el cual define sufuccion con type, la etiqueta autofocus selecciona un elemento de forma predeterminada para el usuario-->
+<input type="text" id="name" name="user_name" autofocus>
 
 </li>
 
@@ -32,13 +33,60 @@
 </li>
 
 <li>
+    <!--El atributto multiple sirve para añadir varios correor electronicos en el input-->
+    <label for="Email">Correo Electronico: </label>
+    <input type="email" id="Email" name="UserEmail" multiple>
+</li>
+
+<li>
+
+    <!--Etiqueta de selccion de color-->
+    <label for="UserColor">Seleccione su color favorito:</label>
+    <input type="color" id="UserColor" name="UserColor">
+
+</li>
+
+<li>
+    <!--La etiqueta rage sirve para poner un ragon de seleccion de opciones numericas-->
+    <label for="Altura">Porfavor seleccione su altura actual: </label>
+    <input type="range" id="Altura" name="Altura" min="1" max="3" step="1" value="2">
+    <output class="price-output" for="Altura"></output>
+</li>
+
+<li>
+
+<!--Lista proporcionada por mi-->
+<li>
+
+    <label for="UserFavorite">¿Cual es tu fruta favorita?</label>
+    <input type="text" id="UserFavorite" name="UserFavorite" list="Lista">
+    <datalist id="Lista">
+        <option>Manzana</option>
+        <option>Pera</option>
+        <option>Uvas</option>
+        <option>Banana</option>
+        <option>Naranja</option>
+        <option>Mandarina</option>
+    </datalist>
+
+</li>
+
 <!-- Asi se crea una lista de seleccion-->
-<label for="Ciudad">Seleccione unqa opcion</label>
+<label for="Ciudad">Seleccione una opcion</label>
 <select>
-<option></option>
+
+<!--optgroup es para poner una lista de diferentes opciones dentro de un rango de elementos-->
+<optgroup label="Pais (Extranjeros)">
+    <option>Estados Unidos</option>
+    <option>Rusia</option>
+    <option>China</option>
+</optgroup>
+
+<optgroup label="Local">
 <option>Bogota</option>
 <option>Cartagena</option>
 <option>Barranquilla</option>
+</optgroup>
 </select>
 </li>
 
@@ -55,7 +103,8 @@
 <!--Asi se hacen los checkbox-->
 <label for="Estudios">Nivel de estudio:</label>
 <br>
-<input type="checkbox" id="Estudios" name="Primaria">Primaria
+<!--El atributo checked sirve para seleccionar una casilla de checkbox al cargar la pagina-->
+<input type="checkbox" id="Estudios" name="Primaria" checked>Primaria
 <br>
 <input type="checkbox" id="Estudios" name="Secundaria">Secundaria
 <br>    
@@ -72,13 +121,23 @@
 
 </li>
 
+<li>
+
+    <!--Input de tipo tiempo sirve para poner fechas-->
+    <input type="datetime-local" name="UserLocalDateTime" id="UserLocalDateTime">
+
+</li>
+
 </ul>
+
+<!--Controlador para subir archivos, el atributo multiple permite seleccionar varios archivos y accept que tipo de archivo se acepta-->
+<input type="file" name="file" id="file" accept="image/*" multiple />
 
 <!--Este boton se usa para enviar los valores de los formularios a un servidor-->
 <input type="submit" value="Enviar">
 
-<!--Este para cancelar-->
-<input type="reset" value="Cancelar">
+<!--Este para cancelar, el atributo disabled sirve para inhabilitar algun elemento-->
+<input type="reset" value="Cancelar" disabled>
 
 </form> 
     
