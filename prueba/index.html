@@ -6,6 +6,7 @@
 
         <title>Formulario</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="index.css">
 
     </head>
 
@@ -14,7 +15,7 @@
 
         <!--Inicio del formulario-->
         <form method="get" action="">
-
+            <h1 id="Registro">Registro</h1>           
             <!--Nombre del usuario-->
             <div id="nombre">
                 <label for="NameUser">Nombre:</label>
@@ -33,7 +34,16 @@
                 <input type="email" id="EmailUser" name="EmailUser" placeholder="Coloque aqui su correo" size="40" value="">
             </div>
 
+            <!--Contraseña-->
+            <div id="Contraseña">
+                <label for="UserPassword">Contraseña:</label>
+                <input type="password" id="UserPassword" name="UserPassword" placeholder="Coloque aqui su contraseña" maxlength="20" value="">
+            </div>
 
+            <!--Terminos y condiciones-->
+            <div id="Terminos">
+                <label for="Term"><input type="checkbox" name="Term" value="Term" id="Term"/> Terminos y condiciones</label>
+            </div>
 
         </form>
 

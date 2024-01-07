@@ -1,0 +1,38 @@
+input[type="checkbox"]{
+    appearance: none;
+}
+
+input[type="checkbox"]{
+    position: relative;
+    width: 1em;
+    height: 1em;
+    border: 1px double grey;
+    vertical-align: -2px;
+    color: red;
+}
+
+input[type="checkbox"]::before{
+    content: "❌";
+    position: absolute;
+    font-size: 1.1em;
+    right: -4.5px;
+    top: -0.3em;
+    visibility: hidden;
+    
+}
+
+input[type="checkbox"]:checked::before{
+    visibility: visible;
+
+}
+
+/*Controladores_formulario_T8*/
+#Name{
+    appearance: none;
+}
+
+#Name:hover{
+
+    border: 1px dashed black;
+    background-color: red;
+}
