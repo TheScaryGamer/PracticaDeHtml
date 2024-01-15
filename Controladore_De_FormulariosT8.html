@@ -4,18 +4,40 @@
     <head>
         <meta charset="UTF-8">
         <title>Controladores de formularios</title>
-        </head>
-    <link rel="stylesheet" href="prueba/index.css"/>
+        <link rel="stylesheet" href="prueba/index.css"/>
+    </head>
+    
     
     <body>
-        <!--Probando el atributto :hover (se usa el index.css de la carpeta)-->
+        <!--Probando el atributto :hover (se usa el index.css de la carpeta), muestra un cambio cuando se pasa el raton por encima-->
         <div id="1">
             <label for="Name">Nombre:<input type="text" id="Name" name="Name" value="" maxlength="20"></label>
         </div>
 
-        <!---->
+        <!--Probando atributo :focus sirve para cambiar entre los diferentes campos con el tabulador-->
+        <div id="1">
+            <label for="Lastname">Apellido:<input type="text" name="Lastname" name="Lastname" value="" maxlength="20"></label>
+        </div>
 
+        <!--Atributo :activate sirve para cuando se precione en el mostrar un cambio-->
+        <div id="1">
+            <label for="Enviar"><input type="button" name="Enviar" id="Enviar" value="Enviar"></label>
+        </div>
 
+        <!--Atributo required sirve para denota un campo super importante-->
+        <div id="1">
+            <label for="Email">Correo Elctronico:<input type="email" name="Email" id="Email" value="" required></label>
+        </div>
+
+        <!--atributo optional es parecido a requiered pero como su nombre indica es opcional-->
+        <div id="1">
+            <label for="gender">Genero:<input type="text" name="gender" id="gender" value="" maxlength="20" ></label>
+        </div>
+
+        <!--el atributo valid sirve para dar una indicacion visual de que esta haciendo el formulario bien-->
+        <div id="1">
+            <label for="edad">Edad:<input type="number" name="edad" id="edad" min="1" max="100" minlength="1" ></label>
+        </div>
     </body>
 
 </html>

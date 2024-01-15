@@ -26,8 +26,13 @@ input[type="checkbox"]:checked::before{
 
 }
 
-/*Controladores_formulario_T8*/
-#Name{
+/*-----------------------------------Controladores_formulario_T8----------------------------------*/
+div{
+    margin: 2px;
+    padding: 2px;
+}
+
+input{
     appearance: none;
 }
 
@@ -35,4 +40,29 @@ input[type="checkbox"]:checked::before{
 
     border: 1px dashed black;
     background-color: red;
+}
+
+input[type="text"]:focus{
+    background-color: burlywood;
+}
+
+#Enviar:active{
+    background-color: aqua;
+    box-shadow: 2px 2px 5px aquamarine;
+}
+
+
+#Email:required{
+    background-color: green;
+}
+
+#gender:optional{
+    background-color: yellow;
+}
+
+#edad:valid{
+    border: none;
+    outline: 2px solid rgb(83, 177, 83);
+    border-radius: 5px;
+    color: black;
 }
